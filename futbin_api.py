@@ -2,12 +2,14 @@ import requests
 import datetime
 
 class FutbinAPI:
+    class Platforms:
+        PC = "pc"
+        XBOX = "xbox"
+        PLAYSTATION = "ps"
+
     FIFA_YEAR = "21"
     FUTBIN_BASE_URL = "https://www.futbin.com/"
-    XBOX_PLATFORM = "xbox"
-    PLAYSTATION_PLATFORM = "ps"
-    PC_PLATFORM = "pc"
-    CURRENT_PLATFORM = PLAYSTATION_PLATFORM
+    CURRENT_PLATFORM = Platforms.PLAYSTATION
 
     @staticmethod
     def get_players_cards_data(player_name):
